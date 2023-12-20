@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Server extends JFrame implements ActionListener {
+public class Client extends JFrame implements ActionListener {
 
   public static final String IconsDir = "Icons/";
 
@@ -18,7 +18,7 @@ public class Server extends JFrame implements ActionListener {
   public Box verticalBox = Box.createVerticalBox();
   public static Color messagesContainerBGColor = new Color(185, 190, 196);
 
-  Server() {
+  Client () {
     setLayout(null);
 
     JPanel headerPanel = new JPanel();
@@ -35,7 +35,7 @@ public class Server extends JFrame implements ActionListener {
       }
     });
 
-    JLabel profileLabel = setImageLabel(headerPanel, IconsDir + "1.png", 40, 10, 50, 50);
+    JLabel profileLabel = setImageLabel(headerPanel, IconsDir + "2.png", 40, 10, 50, 50);
 
     JLabel videoLabel = setImageLabel(headerPanel, IconsDir + "video.png", 300, 20, 30, 30);
 
@@ -43,7 +43,7 @@ public class Server extends JFrame implements ActionListener {
 
     JLabel menuLabel = setImageLabel(headerPanel, IconsDir + "3icon.png", 420, 20, 10, 25);
 
-    JLabel nameLabel = setTextLabel(headerPanel, "Gaitonde", 110, 15, 100, 18, 18, true);
+    JLabel nameLabel = setTextLabel(headerPanel, "Bunty", 110, 15, 100, 18, 18, true);
 
     JLabel statusLabel = setTextLabel(headerPanel, "Active Now", 110, 35, 100, 18, 14, false);
 
@@ -68,7 +68,7 @@ public class Server extends JFrame implements ActionListener {
     add(sendButton);
  
     setSize(450, 700);
-    setLocation(200, 50);
+    setLocation(800, 50);
     getContentPane().setBackground(Color.WHITE);
     // removes the window options like close and minimize:
     setUndecorated(true);
@@ -151,6 +151,6 @@ public class Server extends JFrame implements ActionListener {
   }
 
   public static void main(String[] args) {
-    new Server();
+    new Client();
   }
 }
